@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <iframe style="display: none" src="wkfg://{{ i }}"></iframe>
+
+    <div class="mdui-typo" style="margin-bottom: 200px;">
+        <h1 class="mdui-text-color-grey-700">Thread #{{ i }}</h1>
+        <p>
+            正在尝试唤醒客户端...
+        </p>
+    </div>
+
+{% endblock %}

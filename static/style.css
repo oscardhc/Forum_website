@@ -1,0 +1,105 @@
+.round_icon{
+    width: 40px;
+    height: 40px;
+    margin:auto auto auto auto;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.big_round_icon{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.manageCard {
+    display: inline-block;
+    float: left;
+    width: 46%;
+    margin: auto 2% 20px 2%;
+}
+
+ul {
+    padding-left: 0 !important;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+/*.mdui-panel-item:hover {*/
+/*  background-color: rgba(0, 0, 0, .08);*/
+/*}*/
+
+.mdui-panel-item {
+    margin: 0pt 0pt 10pt 0pt;
+}
+
+#lblock {
+    width: 90%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.mainleft {
+    width: 40%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.mainright {
+    width: 22%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.mycard {
+    display: inline-block;
+    width: 96%;
+    float: top;
+    margin: 50px 2% 20px 2%;
+}
+.mycardb {
+    display: inline-block;
+    float: left;
+    width: 46%;
+    margin: auto 2% 20px 2%;
+}
+
+@media screen and (max-width: 720px) {
+    #lblock {
+        width: 100%;
+        display: block;
+    }
+
+    #cent {
+        display: none;
+    }
+
+    .mainleft {
+        width: 75%;
+        display: block;
+        vertical-align: middle;
+    }
+
+    .mainright {
+        width: 40%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .mycardb {
+        display: block;
+        float: left;
+        width: 96%;
+        margin: auto 2% 20px 2%;
+    }
+}
+

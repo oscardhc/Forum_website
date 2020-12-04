@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div id="lblock" align="center">
+
+        <div class="mdui-card mycard mdui-hoverable" align="center">
+            <div class="mdui-card-content mdui-typo" align="center">
+
+                <div class="mainleft">
+                    <img style="width: 80%" src="{{ url_for('static', filename='sicon4.png') }}">
+                </div>
+
+                <div class="mainright" id="cent">
+                    <img style="width: 100%" id="cCode" style="display: none">
+                </div>
+
+                <div class="mainright">
+                    <div style="height: 30px" ></div>
+                    <div align="left" class="mdui-typo" style="margin-left: -10px">
+                        <h5>下载：</h5>
+                    </div>
+                    <div style="height: 15px" ></div>
+                    <a href="/download/iOS" id="iosCode" >
+                        <img style="width: 100%" src="{{ url_for('static', filename='ios.png') }}">
+                    </a>
+                    <a href="/download/Android" id="AndroidCode">
+                        <img style="margin-top: 5%; width: 100%" src="{{ url_for('static', filename='android.png') }}">
+                    </a>
+                    <div style="height: 30px" ></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="mdui-card mycardb mdui-typo mdui-hoverable">
+            <div style="width: 80%;">
+                <h3>OPEN SOURCE</h3>
+
+                <div class="mdui-divider"></div>
+                <div class="mdui-card-content">
+                    <div>
+                        <a href="https://github.com/oscardhc/Forum" style="margin-top: 10px; margin-bottom: 10px">
+                            <img width="30px" style="vertical-align: middle" src="{{ url_for('static', filename='github.png') }}">
+                            <span style="vertical-align: middle">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; iOS Frontend &nbsp;&nbsp;&nbsp;&nbsp;
+                            </span>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="https://github.com/TairanHe/SJTU-Anonymous_Forum" style="margin-top: 10px; margin-bottom: 10px">
+                            <img width="30px" style="vertical-align: middle" src="{{ url_for('static', filename='github.png') }}">
+                            <span style="vertical-align: middle">
+                            &nbsp;&nbsp;&nbsp; Android Frontend
+                            </span>
+                        </a>
+                    </div>
+
+                    <div style="width: 130%; margin-left: -15%">
+                        <a href="https://github.com/wu-qing-157/Anonymous" style="margin-top: 10px; margin-bottom: 10px; display: inline-block">
+                            <img width="20px" style="vertical-align: middle" src="{{ url_for('static', filename='github.png') }}">
+                            <span style="vertical-align: middle">
+                                &nbsp; Android Community Ver.
+                            </span>
+                        </a>
+                        <a href="https://github.com/wu-qing-157/Anonymous" style="margin-top: 10px; margin-bottom: 10px; margin-left: 15px; display: inline-block">
+                            <img width="20px" style="vertical-align: middle" src="{{ url_for('static', filename='github.png') }}">
+                            <span style="vertical-align: middle">
+                                &nbsp; Official Website
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mdui-card mycardb mdui-typo mdui-hoverable">
+            <div style="width: 80%;">
+                <h3>CONTACT</h3>
+
+                <div class="mdui-divider"></div>
+                <img style="width: 120%" src="{{ url_for('static', filename='wechat.jpg') }}">
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
+
+{% block scr %}
+    <script>
+        document.querySelector("#iosCode").addEventListener("mouseover", evt => {
+            document.querySelector("#cCode").style.display = "block"
+            document.querySelector("#cCode").src = "{{ url_for('static', filename='diOS.png') }}"
+        });
+        document.querySelector("#iosCode").addEventListener("mouseout", evt => {
+            document.querySelector("#cCode").style.display = "none"
+        });
+
+        document.querySelector("#AndroidCode").addEventListener("mouseover", evt => {
+            document.querySelector("#cCode").style.display = "block"
+            document.querySelector("#cCode").src = "{{ url_for('static', filename='dAndroid.png') }}"
+        });
+        document.querySelector("#AndroidCode").addEventListener("mouseout", evt => {
+            document.querySelector("#cCode").style.display = "none"
+        });
+    </script>
+{% endblock %}
+
