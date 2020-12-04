@@ -1,4 +1,4 @@
-from flask import Flask, redirect, render_template, request
+from flask import Flask, redirect, render_template, request, send_file
 
 app = Flask(__name__)
 tencent = [('QQ', 'QQ'), ('MicroMessenger', '微信')]
@@ -19,14 +19,18 @@ def viewThread(i):
     return checkPlatformFirst(
         '分享链接',
         lambda: redirect(f'wkfg://{i}')
-        # lambda: render_template('shareLink.html', i=i)
     )
+
+def getfile():
+    with open('./version.txt') as f:
+        path = f.read().split('\n')[0]
+        return send_file(path, as_attachment=True)
 
 @app.route('/download/Android')
 def dAndroid():
     return checkPlatformFirst(
         'Android 客户端下载',
-        lambda: redirect('http://59.78.38.196:5007/download')
+        lambda: getfile()
     )
 
 @app.route('/download/iOS')
